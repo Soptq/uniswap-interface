@@ -6,6 +6,8 @@
 [![Release](https://github.com/Uniswap/uniswap-interface/actions/workflows/release.yaml/badge.svg)](https://github.com/Uniswap/uniswap-interface/actions/workflows/release.yaml)
 [![Crowdin](https://badges.crowdin.net/uniswap-interface/localized.svg)](https://crowdin.com/project/uniswap-interface)
 
+[![Add to Homescreen](https://img.shields.io/badge/Skynet-Add%20To%20Homescreen-0d0d0d?style=flat&labelColor=00c65e)](https://homescreen.hns.siasky.net/#/add/github/SkynetLabs/uniswap-interface)
+
 An open source interface for Uniswap -- a protocol for decentralized exchange of Ethereum tokens.
 
 - Website: [uniswap.org](https://uniswap.org/)
