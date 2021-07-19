@@ -14,7 +14,7 @@ msgstr ""
 "X-Crowdin-File-ID: 4\n"
 "Project-Id-Version: uniswap-interface\n"
 "Language-Team: German\n"
-"PO-Revision-Date: 2021-07-15 15:04\n"
+"PO-Revision-Date: 2021-07-15 22:05\n"
 
 #: src/pages/Pool/PositionPage.tsx
 #: src/pages/Pool/PositionPage.tsx
@@ -93,7 +93,7 @@ msgstr "<0/> Alle Vorschläge"
 #: src/pages/Vote/index.tsx
 #: src/pages/Vote/index.tsx
 msgid "<0/> Votes"
-msgstr "<0/> Abstimmungen"
+msgstr "<0/> Stimmen"
 
 #: src/pages/Pool/v2.tsx
 msgid "<0>Account analytics and accrued fees</0><1> ↗ </1>"
@@ -600,7 +600,7 @@ msgstr "Delegiert an:"
 
 #: src/state/governance/hooks.ts
 msgid "Delegated votes"
-msgstr "Delegierte Stimmen"
+msgstr "Delegiertes Stimmenrecht"
 
 #: src/components/vote/DelegateModal.tsx
 msgid "Delegating votes"
@@ -1181,7 +1181,7 @@ msgstr "Ausstehend"
 
 #: src/components/SearchModal/ManageLists.tsx
 msgid "Please confirm you would like to remove this list by typing REMOVE"
-msgstr "Bitte bestätigen Sie, dass Sie diese Liste entfernen möchten, indem Sie ENTFERNEN . eingeben"
+msgstr "Bitte bestätigen Sie, dass Sie diese Liste entfernen möchten, indem Sie ENTFERNEN eingeben"
 
 #: src/components/vote/ProposalEmptyState.tsx
 msgid "Please connect to Layer 1 Ethereum"
@@ -1470,7 +1470,7 @@ msgstr "Schritt 1. Holen Sie sich UNI-V2-Liquiditätstoken"
 
 #: src/state/governance/hooks.ts
 msgid "Submitted new proposal"
-msgstr "Neues Angebot eingereicht"
+msgstr "Neuer Vorschlag eingereicht"
 
 #: src/pages/CreateProposal/ProposalSubmissionModal.tsx
 msgid "Submitting Proposal"
@@ -1559,7 +1559,7 @@ msgstr "Die Transaktion konnte nicht gesendet werden, da die Frist abgelaufen is
 
 #: src/components/LiquidityChartRangeInput/index.tsx
 msgid "There is no liquidity data."
-msgstr "Es liegen keine Liquiditätsdaten vor."
+msgstr "Keine Liquiditätsdaten vorhanden."
 
 #: src/components/SearchModal/CommonBases.tsx
 msgid "These tokens are commonly paired with other tokens."
@@ -1955,7 +1955,7 @@ msgstr "Du kannst jetzt {0} handeln"
 
 #: src/pages/CreateProposal/index.tsx
 msgid "You don't have enough votes to submit a proposal"
-msgstr "Sie haben nicht genug Stimmen, um einen Vorschlag einzureichen"
+msgstr "Ihr Stimmrecht reicht nicht aus, um einen Vorschlag einzureichen"
 
 #: src/pages/PoolFinder/index.tsx
 msgid "You don’t have liquidity in this pool yet."

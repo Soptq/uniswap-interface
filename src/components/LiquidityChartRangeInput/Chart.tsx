@@ -5,7 +5,7 @@ import { AxisBottom } from './AxisBottom'
 import { Brush } from './Brush'
 import { Line } from './Line'
 import { ChartEntry, LiquidityChartRangeInputProps } from './types'
-import Zoom from './Zoom'
+import Zoom, { ZoomOverlay } from './Zoom'
 
 export const xAccessor = (d: ChartEntry) => d.price0
 export const yAccessor = (d: ChartEntry) => d.activeLiquidity
@@ -22,7 +22,7 @@ export function Chart({
   onBrushDomainChange,
   zoomLevels,
 }: LiquidityChartRangeInputProps) {
-  const svgRef = useRef<SVGSVGElement | null>(null)
+  const zoomRef = useRef<SVGRectElement | null>(null)
 
   const [zoom, setZoom] = useState<ZoomTransform | null>(null)
 
@@ -60,21 +60,21 @@ export function Chart({
     }
   }, [brushDomain, onBrushDomainChange, xScale])
 
-  // ensures the brush remains in view and adapts to zooms
-  xScale.clamp(true)
-
   return (
     <>
       <Zoom
-        svg={svgRef.current}
+        svg={zoomRef.current}
         xScale={xScale}
         setZoom={setZoom}
-        innerWidth={innerWidth}
-        innerHeight={innerHeight}
-        showClear={Boolean(zoom && zoom.k !== 1)}
+        width={innerWidth}
+        height={
+          // allow zooming inside the x-axis
+          height
+        }
+        showClear={false}
         zoomLevels={zoomLevels}
       />
-      <svg ref={svgRef} width="100%" height="100%" viewBox={`0 0 ${width} ${height}`} style={{ overflow: 'visible' }}>
+      <svg width="100%" height="100%" viewBox={`0 0 ${width} ${height}`} style={{ overflow: 'visible' }}>
         <defs>
           <clipPath id={`${id}-chart-clip`}>
             <rect x="0" y="0" width={innerWidth} height={height} />
@@ -116,6 +116,8 @@ export function Chart({
 
             <AxisBottom xScale={xScale} innerHeight={innerHeight} />
           </g>
+
+          <ZoomOverlay width={innerWidth} height={height} ref={zoomRef} />
 
           <Brush
             id={id}
